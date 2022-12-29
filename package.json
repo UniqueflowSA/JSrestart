@@ -1,0 +1,28 @@
+{
+  "name": "tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UniqueflowSA/JSrestart.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UniqueflowSA/JSrestart/issues"
+  },
+  "homepage": "https://github.com/UniqueflowSA/JSrestart#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+  " __coment1__":"설치한 패키지들의 버전이 명시되어있다. 추후에 필요한 파일들을 그냥 설치할 수 있다 이거야",
+  "__coment2__": "JSON은 상호호환성 방해 방지를 목적으로 주석을 없애버렸다."
+  } 
+}

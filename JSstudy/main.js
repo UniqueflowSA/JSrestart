@@ -1,17 +1,9 @@
-//그래서 '복사'를 해야한다는 거지.
-//얕은 복사(shallow copy), 깊은 복사(Deep copy)
- const who = {
-  name: 'june',
-  age: 50,
-  email:['saco2020a@gmail.com']
- }
-
- const copyWho = object.assign({},who)
- //복사는 이런 식으로 빈 객체{}에 assign으로 씌우는 느낌.
- const copyWho1 = {...who}
- //{}안에 전개 연산자를 호출하면 자동으로 복사되겠지요?
- console.log(copyWho === who)
-
- who.age = 23
- console.log('who', who)
- console.log("copyWho", copyWho)
+import _ from 'lodash'
+import iDonKnow from "./getType"
+//defalut 는 또한 import할때도 이름 변경이 가능하다.
+import getRandom from "./getRandom"
+import {june} from "./getType"
+//name export는 import할때 이름이 일치해야하며, {}로 묶어줘야한다.
+//{june as young}으로 import이름을 변경해줄 수 있다.
+import * as R from "./getRandom"
+//import를 *(애스터리스크)로 호출하면 모든 데이터를 내가 지정한 R에 할당(as사용)
