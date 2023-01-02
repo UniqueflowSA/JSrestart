@@ -5383,13 +5383,20 @@ exports.Axios = Axios;
 var _axios = _interopRequireDefault(require("axios"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function Movies() {
-  _axios.default.get("https://www.omdbapi.com/?apikey=7035c60c&s=frozen") //axios.get('https://address.com): 인수로 주소를 주면 패키지에서 주소에 들어있는 정보를 빼낸다.
-  .then(function (response) {
-    console.log(response);
+  _axios.default.get("https://www.omdbapi.com/?apikey=7035c60c&s=frozen")
+  //axios.get('https://address.com): 인수로 주소를 주면 패키지에서 주소에 들어있는 정보를 빼낸다.
+  .then(function (res) {
+    console.log(res);
+    var TitleEl = document.querySelector('h1');
+    var picEl = document.querySelector('img');
+    TitleEl.textContent = res.data.Search[0].Title;
+    picEl.src = res.data.Search[0].Poster;
+    //해당 데이터를 꺼내서 HTML변환을 유도한다.
   });
 } //https사용 추천 보안상 문제도 있고
 
 Movies();
+//서버에서 해당 주소에 들어있는 정보들이 나온다.
 },{"axios":"node_modules/axios/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5415,7 +5422,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65282" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52478" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];
